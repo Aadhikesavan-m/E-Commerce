@@ -66,6 +66,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddtoCart from "./AddtoCart";
 import CartPage from "./CartElement";
 import { useState } from "react";
+import UnknownFile from "./UnknownFile";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -77,6 +78,7 @@ function App() {
           path="/cart"
           element={<CartPage cart={cart} setCart={setCart} />}
         />
+        <Route path="*" element={<UnknownFile />} />
       </Routes>
     </BrowserRouter>
   );
