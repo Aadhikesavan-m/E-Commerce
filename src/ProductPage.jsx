@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
-import "./productPage.css"; 
+import "./product.css"; 
 
 // Component to display star rating
 const StarRating = ({ rating }) => {
