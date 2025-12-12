@@ -1,0 +1,88 @@
+/* Center the form on the page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f3; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form container */
+form {
+  background: #fff;
+  padding: 35px 30px;
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+form h1 {
+  margin-bottom: 12px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Input containers */
+.registerEmail,
+.passwordInput {
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.registerEmail h1,
+.passwordInput h1 {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #666;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #4a90e2;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #357ac8;
+}
+
+/* Redirect link text */
+p {
+  font-size: 14px;
+  color: #444;
+  margin-top: 15px;
+}
+
+p a {
+  color: #4a90e2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
