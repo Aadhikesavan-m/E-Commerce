@@ -25,37 +25,42 @@ function Login({ users }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Login Form</h1>
-      <div className="loginEmail">
-        <h1>👤</h1>
-        <input
-          type="text"
-          placeholder="Email or Phone"
-          value={registeredUser}
-          onChange={(e) => setRegisteredUser(e.target.value)}
-        />
-      </div>
-      <div className="passwordInput">
-        <h1>🔒</h1>
-        <input
-          type="password"
-          placeholder="Password"
-          value={registedPassword}
-          onChange={(e) => setRegisteredPassword(e.target.value)}
-        />
-      </div>
+   <form className="login-form" onSubmit={handleSubmit}>
+  <h1 className="login-form__title">Login Form</h1>
 
-      <p>
-        <Link to="/forgot">Forget Password?</Link>
-      </p>
+  <div className="login-form__email">
+    <h1>👤</h1>
+    <input
+      type="text"
+      placeholder="Email or Phone"
+      value={registeredUser}
+      onChange={(e) => setRegisteredUser(e.target.value)}
+      className="login-form__input"
+    />
+  </div>
 
-      <button>Submit</button>
+  <div className="login-form__password">
+    <h1>🔒</h1>
+    <input
+      type="password"
+      placeholder="Password"
+      value={registedPassword}
+      onChange={(e) => setRegisteredPassword(e.target.value)}
+      className="login-form__input"
+    />
+  </div>
 
-      <p>
-        Not a Member ? <Link to="/register">Register Now</Link>
-      </p>
-    </form>
+  <p className="login-form__link">
+    <Link to="/forgot">Forget Password?</Link>
+  </p>
+
+  <button className="login-form__button">Submit</button>
+
+  <p className="login-form__register">
+    Not a Member ? <Link to="/register">Register Now</Link>
+  </p>
+</form>
+
   );
 }
 

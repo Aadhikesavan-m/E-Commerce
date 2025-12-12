@@ -36,45 +36,49 @@ function Register({ users, setUsers }) {
 
   return (
     <>
-      <form onSubmit={handleRegister}>
-        <h1>Register Form</h1>
+      <form className="register-form" onSubmit={handleRegister}>
+  <h1 className="register-form__title">Register Form</h1>
 
-        <div className="registerEmail">
-          <h1>👤</h1>
-          <input
-            type="text"
-            placeholder="Email or Phone"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
-          />
-        </div>
+  <div className="register-form__email">
+    <h1>👤</h1>
+    <input
+      type="text"
+      placeholder="Email or Phone"
+      value={user}
+      onChange={(e) => setUser(e.target.value)}
+      className="register-form__input"
+    />
+  </div>
 
-        <div className="passwordInput">
-          <h1>🔑</h1>
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+  <div className="register-form__password">
+    <h1>🔑</h1>
+    <input
+      type="password"
+      placeholder="Password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      className="register-form__input"
+    />
+  </div>
 
-        <div className="passwordInput">
-          <h1>🔑</h1>
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={confirm}
-            onChange={(e) => setConfirm(e.target.value)}
-          />
-        </div>
+  <div className="register-form__password">
+    <h1>🔑</h1>
+    <input
+      type="password"
+      placeholder="Confirm Password"
+      value={confirm}
+      onChange={(e) => setConfirm(e.target.value)}
+      className="register-form__input"
+    />
+  </div>
 
-        <button>Register</button>
+  <button className="register-form__button">Register</button>
 
-        <p>
-          Already a Member? <Link to="/login">Sign in Now</Link>
-        </p>
-      </form>
+  <p className="register-form__link">
+    Already a Member? <Link to="/login">Sign in Now</Link>
+  </p>
+</form>
+
     </>
   );
 }

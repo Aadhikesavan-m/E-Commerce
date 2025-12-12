@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./atc.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Img from "./assets/no search.jpg";
 import banner1 from "./assets/Banner/banner.avif";
 import banner2 from "./assets/Banner/banner2.avif";
@@ -16,6 +16,8 @@ function AddtoCart({ cart, setCart, users }) {
   const [activeCategory, setActiveCategory] = useState("Shop All");
   const [bestSellers, setBestSellers] = useState([]);
 
+  const navigate = useNavigate()
+
   const images = [banner1, banner2, banner3];
   const [index, setIndex] = useState(0);
 
@@ -24,6 +26,14 @@ function AddtoCart({ cart, setCart, users }) {
   //user detail
   const lastUser = users.length > 0 ? users[users.length - 1] : null;
   const icon = lastUser ? lastUser.username.charAt(0).toUpperCase() : "👤";
+
+  //handleLogout
+  const handleLogout = () => {
+    setUsers([]);
+    navigate("/login")
+};
+
+
 
   // Banner change
   useEffect(() => {
@@ -145,7 +155,19 @@ function AddtoCart({ cart, setCart, users }) {
             🛒 <span className="cart-count">{cart.length}</span>
           </button>
         </Link>
-        <span className="avatar">{icon}</span>
+        <div className="user-auth-wrapper">
+          <span className="avatar">{icon}</span>
+
+          {lastUser ? (
+            <span className="auth-btn" onClick={handleLogout}>
+              Logout
+            </span>
+          ) : (
+            <Link to="/login" className="auth-btn">
+              Login
+            </Link>
+          )}
+        </div>
       </nav>
 
       {/* BODY */}
@@ -201,8 +223,8 @@ function AddtoCart({ cart, setCart, users }) {
 
               {/* DUAL BANNER */}
               <div className="dual-banner">
-                <div className="banner-box left-banner">
-                  <div className="banner-content">
+                <div className="banner-box left-banner d-b-1">
+                  <div className="banner-content ">
                     <p className="banner-small">Holiday Deals</p>
                     <h1 className="banner-title">
                       Up to

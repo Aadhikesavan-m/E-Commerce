@@ -28,7 +28,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<AddtoCart cart={cart} setCart={setCart} users={users} />}
+          element={<AddtoCart cart={cart} setCart={setCart} users={users} setUsers ={setUsers}/>}
         />
 
         <Route

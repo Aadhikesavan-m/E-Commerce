@@ -1,107 +1,78 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Scope all styles under the login-form class */
+.login-form {
+  width: 350px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(147, 208, 233, 0.63); 
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background-color: #f5f7fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* Form container */
-form {
-  background-color: #fff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 400px;
+.login-form__title {
   text-align: center;
-}
-
-form h1 {
   font-size: 28px;
   margin-bottom: 25px;
   color: #333;
 }
 
-/* Input container */
-.loginEmail, .passwordInput {
+.login-form__email,
+.login-form__password {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background: #f1f3f6;
-  border-radius: 8px;
-  padding: 10px;
 }
 
-.loginEmail h1, .passwordInput h1 {
+.login-form__email h1,
+.login-form__password h1 {
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 24px;
 }
 
-.loginEmail input, .passwordInput input {
-  border: none;
-  outline: none;
-  width: 100%;
+.login-form__input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 16px;
-  background: transparent;
 }
 
-/* Links */
-form p {
-  font-size: 14px;
+.login-form__input:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.login-form__link,
+.login-form__register {
+  text-align: center;
   margin: 10px 0;
 }
 
-form p a {
-  color: #5a2aff;
+.login-form__link a,
+.login-form__register a {
+  color: #6c63ff;
   text-decoration: none;
 }
 
-form p a:hover {
+.login-form__link a:hover,
+.login-form__register a:hover {
   text-decoration: underline;
 }
 
-/* Submit button */
-form button {
+.login-form__button {
   width: 100%;
-  padding: 12px 0;
-  margin: 20px 0;
-  background-color: #5a2aff;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #6c63ff;
+  color: white;
   border: none;
   border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-form button:hover {
-  background-color: #4220b5;
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  form {
-    padding: 30px 20px;
-  }
-
-  .loginEmail h1, .passwordInput h1 {
-    font-size: 18px;
-  }
-
-  form h1 {
-    font-size: 24px;
-  }
+.login-form__button:hover {
+  background-color: #574fd6;
 }
